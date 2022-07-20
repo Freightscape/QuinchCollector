@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Drink Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ drink.name }}</span>
+    <p>Type: {{ drink.kind }}</p>
+    <p>Description: {{ drink.description }}</p>
+    {% if drink.price > 0 %}
+      <p>Price: {{ drink.price }}</p>
+    {% else %}
+      <p>Price: N/A</p>
+    {% endif %}
+  </div>
+  <div class="card-action">
+    <a href="{% url 'drinks_update' drink.id %}">Edit</a>
+    <a href="{% url 'drinks_delete' drink.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

@@ -14,12 +14,13 @@
   <header class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-        <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;DrinkCollector</a></li>
+        <ul> 
+          <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;QuinchCollector</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about">About</a></li>
-          <li><a href="/drinks">View All The Drinks</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'drinks_create' %}">Add a Drink</a></li>
+          <li><a href="{% url 'index' %}">View All The Drinks</a></li>
         </ul>
       </div>
     </nav>
