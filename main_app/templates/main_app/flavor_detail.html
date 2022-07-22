@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Flavor Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ flavor.name }}</span>
+        <p>Color: {{ flavor.color }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'flavors_update' flavor.id %}">Edit</a>
+        <a href="{% url 'flavors_delete' flavor.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
